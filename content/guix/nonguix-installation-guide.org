@@ -23,6 +23,7 @@ Guix installer.
 - [[#pre-installation][Pre-installation]]
   - [[#download-the-installation-image][Download the installation image]]
   - [[#booting][Booting]]
+  - [[#keyboard-layout][Keyboard Layout]]
   - [[#connecting-to-the-internet][Connecting to the internet]]
   - [[#partition-the-disks][Partition the disks]]
 - [[#installation][Installation]]
@@ -59,6 +60,22 @@ and select "Install using the shell based process" when
 prompted. Although this makes the installation slightly more
 difficult, it allows for setting up your new installation with the
 full Linux kernel (necessary for the nonfree installation.)
+
+** Keyboard Layout
+
+The default console keymap is US. Available layouts can be listed with:
+
+#+BEGIN_SRC sh
+ls /usr/share/kbd/keymaps/**/*.map.gz
+#+END_SRC
+
+Then load your prefered layout:
+
+For example (German language layout):
+
+#+BEGIN_SRC sh
+loadkeys de
+#+END_SRC
 
 ** Connecting to the internet
 
